@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+	
+<f:view contentType="text/html"/>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>AUTHENTIFICATION</title>
+</head>
+<body>
+<h:form>
+	<h:panelGrid columns="2">
+		<h:outputLabel value="Email		:"/>
+		<h:inputText value="#{auth.email}" required="true"/>
+		<h:outputLabel value="Mot de passe		:"/>
+		<h:inputSecret value="#{auth.password}" required="true"/>
+	</h:panelGrid>
+	
+	<h:commandButton action="#{auth.controler}" value="S'AUTHENTIFIER">
+		<f:ajax execute="message" render="sortieajax"></f:ajax>
+	</h:commandButton>
+	<h:outputText id="sortieajax" value="#{auth.message}"/>
+	
+</h:form>
+</body>
+</html>
