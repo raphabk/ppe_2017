@@ -39,7 +39,7 @@ public class ServiceREST {
 			message.setRole(role);
 		}
 		else
-			message.setBienvenue("Votre compte et/ou mot de passe est incorrect.");
+			message.setBienvenue("Votre compte et/ou mot de passe est incorrect");
 		
 		return message;		
 	}
