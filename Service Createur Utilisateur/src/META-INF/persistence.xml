@@ -5,13 +5,14 @@
              <persistence-unit name="creationutilisateur" transaction-type="RESOURCE_LOCAL">
                
       	<class>modele.Utilisateur</class>  
-    	<!-- <class>modele.Role</class> -->
+    	<class>modele.Role</class>
+    	<class>modele.Action</class>
     	 
       <properties>
          <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.ClientDriver"/>
          <property name="javax.persistence.jdbc.user" value="derby"/>
          <property name="javax.persistence.jdbc.password" value="derby"/>
-         <property name="javax.persistence.jdbc.url" value="jdbc:derby://derby:1530/ppeDB;create=true"/>
+         <property name="javax.persistence.jdbc.url" value="jdbc:derby://derby:1530/ppeDB"/>
          <property name="hibernate.dialect" value="org.hibernate.dialect.DerbyTenSixDialect"/>
          <!-- <property name="hibernate.connection.autocommit" value="true" /> -->
          <property name="hibernate.max_fetch_depth" value="3"/>     
